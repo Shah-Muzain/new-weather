@@ -3,6 +3,8 @@
 <head>
     <title>Weather App - Port 5000</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+
 </head>
 <body>
     <div class="card">
@@ -15,5 +17,11 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js");
+}
+</script>
+
 </body>
 </html>
